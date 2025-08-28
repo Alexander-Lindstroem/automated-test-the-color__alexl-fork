@@ -22,7 +22,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header setCurrentPage={setPage}/>
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
