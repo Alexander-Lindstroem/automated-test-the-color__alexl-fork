@@ -1,9 +1,11 @@
 'use client'
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { useState } from "react";
+import MainContent from "@/components/MainContent";
+import Rgb from "./rgb/page";
+import Hex from "./hex/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,11 +21,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const [page, setPage] = useState<string>("home")
 
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html className="h-[100vh]" lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable} h-full antialiased flex flex-col`}>
         <Header setCurrentPage={setPage}/>
-        <main>
-          {children}
+        <main className="flex flex-col justify-center items-center grow-1">
+          {page === "home" ? <MainContent/> 
+          : page === "rgb" ? <Rgb/> 
+          :/*page === "hex"*/<Hex/>}
         </main>
       </body>
     </html>
