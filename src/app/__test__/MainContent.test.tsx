@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import MainContent from "./index";
+import MainContent from "@/components/MainContent";
 import "@testing-library/jest-dom";
 
 jest.mock("next/image", () => ({
@@ -41,7 +41,7 @@ describe("testing all the elements and content inside MainContent comp.", () => 
     render(<MainContent />);
     
     expect(
-      screen.getByText("Start with white and apply colored pigments that absorb light.")
+      screen.getByText("Start with white and apply colored pigments that absorb light")
     ).toBeInTheDocument();
     
     expect(
