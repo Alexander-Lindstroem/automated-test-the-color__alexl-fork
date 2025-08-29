@@ -4,8 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { useState } from "react";
 import MainContent from "@/components/MainContent";
-import Rgb from "./rgb/page";
-import Hex from "./hex/page";
+import Rgb from "../components/Rgb";
+import Hex from "../components/Hex";
 import Footer from "@/components/Footer";
 
 const geistSans = Geist({
