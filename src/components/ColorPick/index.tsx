@@ -1,4 +1,5 @@
 'use client'
+import { ColorPickProps } from "@/utils/types"
 
 const ColorPick = ({color, colorHeading, onClick}:ColorPickProps) => {
     const handleClick = () => {

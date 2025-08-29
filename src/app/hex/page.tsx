@@ -1,5 +1,6 @@
 'use client'
 import ColorPick from "@/components/ColorPick"
+import { ChangeColorType } from "@/utils/types"
 
 const Hex = ({changeColor}:ChangeColorType) => {
     return (

@@ -1,13 +1,13 @@
-type HeaderProps = {
+export type HeaderProps = {
     setCurrentPage: Function,
 }
 
-type ColorPickProps = {
+export type ColorPickProps = {
     color: string | null,
     colorHeading: string,
     onClick: Function,
 }
 
-type ChangeColorType = {
+export type ChangeColorType = {
     changeColor: Function
 }
