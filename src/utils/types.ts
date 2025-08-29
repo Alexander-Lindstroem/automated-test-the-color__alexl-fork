@@ -7,3 +7,7 @@ type ColorPickProps = {
     colorHeading: string,
     onClick: Function,
 }
+
+type ChangeColorType = {
+    changeColor: Function
+}

@@ -18,17 +18,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout() {
   const [page, setPage] = useState<string>("home")
+  const [color, setColor] = useState<string>("#fff")
 
   return (
     <html className="h-[100vh]" lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} h-full antialiased flex flex-col`}>
         <Header setCurrentPage={setPage}/>
-        <main className="flex flex-col justify-center items-center grow-1">
+        <main className="flex flex-col justify-center items-center grow-1" style={{backgroundColor: color}}>
           {page === "home" ? <MainContent/> 
-          : page === "rgb" ? <Rgb/> 
-          :/*page === "hex"*/<Hex/>}
+          : page === "rgb" ? <Rgb changeColor={setColor}/> 
+          :/*page === "hex"*/<Hex changeColor={setColor}/>}
         </main>
         <Footer/>
       </body>

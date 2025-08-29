@@ -1,9 +1,9 @@
 'use client'
 import ColorPick from "@/components/ColorPick"
 
-const Hex = () => {
+const Hex = ({changeColor}:ChangeColorType) => {
     return (
-        <ColorPick color="#000000" colorHeading="HEX Background" onClick={() => {}}/>
+        <ColorPick color="#6BF5B1" colorHeading="HEX Background" onClick={changeColor}/>
     )
 }
 

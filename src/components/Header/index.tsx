@@ -9,9 +9,9 @@ const Header = ({setCurrentPage}:HeaderProps) => {
                 <h1>Color Picker</h1>
             </div>
             <div className="select-none flex flex-row gap-4">
-                <h2 className="cursor-pointer select-none" onClick={() => handleClick("home")}>HOME</h2>
-                <h2 className="cursor-pointer select-none" onClick={() => handleClick("rgb")}>RGB</h2>
-                <h2 className="cursor-pointer select-none" onClick={() => handleClick("hex")}>HEX</h2>
+                <h3 className="cursor-pointer select-none" onClick={() => handleClick("home")}>HOME</h3>
+                <h3 className="cursor-pointer select-none" onClick={() => handleClick("rgb")}>RGB</h3>
+                <h3 className="cursor-pointer select-none" onClick={() => handleClick("hex")}>HEX</h3>
             </div>
         </header>
     )

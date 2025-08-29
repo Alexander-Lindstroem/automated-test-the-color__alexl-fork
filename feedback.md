@@ -31,3 +31,7 @@ The usage of mock functions are good and it made me realize I should've done tha
 ### Footer
 
 There's only one test, so there's not much to say. Maybe check for more specific roles? Just for ARIA purposes.
+
+### Home
+
+Given that I could pass all the tests here without basically doing anything, and that the site still did not have the function to change background color actually integrated, I would have to say that the tests here are insufficient. The tests should actually check whether or not the right value gets passed into the function, and that said function works. You might have to check the background color attribute of main.
