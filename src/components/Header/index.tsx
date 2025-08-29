@@ -1,3 +1,5 @@
+import { HeaderProps } from "@/utils/types"
+
 const Header = ({setCurrentPage}:HeaderProps) => {
     const handleClick = (argument:string) => {
         setCurrentPage(argument)
