@@ -6,6 +6,7 @@ import { useState } from "react";
 import MainContent from "@/components/MainContent";
 import Rgb from "./rgb/page";
 import Hex from "./hex/page";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           : page === "rgb" ? <Rgb/> 
           :/*page === "hex"*/<Hex/>}
         </main>
+        <Footer/>
       </body>
     </html>
   );
